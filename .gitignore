@@ -23,7 +23,6 @@ docs
 logs
 temp
 
-.dockerignore
 *.txt
 *.dll
 *.exe
