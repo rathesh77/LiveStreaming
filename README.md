@@ -18,7 +18,7 @@ For the moment, the instructions below can be safely applied on a windows operat
 - start the nginx server with the command ```nginx```. This will start a web server listening on port 80 and a rtmp server listening on port 1935
 
 ## Record and stream your windows desktop using FFMPEG
-- After downloading an already compiled version of FFMPEG (or the source code that you compiled on your own), browse to the ffmpeg.exe file location and start recording and streaming your windows desktop with the following command : ``` ffmpeg -f dshow -framerate 30 -i video="screen-capture-recorder" -vcodec libx264 -pix_fmt yuv420p -tune zerolatency -preset ultrafast -f flv rtmp://localhost/live/test ```. This will streaming your desktop and stream it to the rtmp server which is running under the url "rtmp://localhost/live/test". By default, RTMP uses port 1935 so you do not need to specify it.
+- After downloading an already compiled version of FFMPEG (or the source code that you compiled on your own), browse to the ffmpeg.exe file location and start recording and streaming your windows desktop with the following command : ``` ffmpeg -f dshow -framerate 30 -i video="screen-capture-recorder" -vcodec libx264 -pix_fmt yuv420p -tune zerolatency -preset ultrafast -f flv rtmp://localhost/live/test ```. This will capture and stream your desktop to the rtmp server which is running under the url "rtmp://localhost/live/test". By default, RTMP uses port 1935 so you do not need to specify it.
 
 Go to http://localhost and enjoy ! 
 ## License
