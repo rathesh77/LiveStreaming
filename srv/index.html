@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pigeon.tv</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <nav>
+        <div class="flex">
+            <li class="nav-li nav-brand">Pigeon.tv</li>
+            <li class="nav-li">En live</li>
+            <li class="nav-li">Streamer</li>
+        </div>
+    </nav>
+
+    <div id="main-container">
+        <div id="video-container">
+            <div id="user-container" class="absolute">
+                <div id="user-wrapper">
+                    <div>Pigeon</div>
+                    <div style="font-size: 14px;">Joue à Just Chatting</div>
+                </div>
+            </div>
+            <video id="video" onplay="goToEnd(this)">
+            </video>
+            <div id="buttons-container" class="absolute">
+                <div id="buttons-wrapper">
+                    <button class="btn" onclick="playOrPause(this)"><i class="fa fa-pause">
+                        </i></button>
+                    <button class="btn ml-auto" onclick=" muteOrUnmute(this)"><i class="fa fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar chat-container">
+            <div class="header">
+                <span>Chat du stream</span>
+            </div>
+            <div id="chat">
+                <div class="message">User1: test</div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
