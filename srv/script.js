@@ -1,8 +1,4 @@
 let video = document.getElementById('video');
-video.onloadeddata = function () {
-    if (video.duration - 7 > video.currentTime)
-        video.currentTime = video.duration - 7
-}
 function playOrPause(button) {
     let i = document.createElement('i')
     if (video.paused) {
@@ -47,6 +43,7 @@ if (Hls.isSupported()) {
     hls.loadSource('./hls/test/index.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED, function () {
+        goToEnd(video)
         video.play();
     });
 }
@@ -57,6 +54,7 @@ else if (video.canPlayType('application/vnd.apple.mpegurl')) {
     });
 }
 function goToEnd(element) {
-    if (element.duration - 7 > element.currentTime)
-        element.currentTime = element.duration - 7
+   if (element.currentTime != 0) {
+        element.currentTime = element.duration
+   }
 }
